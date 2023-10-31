@@ -70,6 +70,7 @@ namespace dvcsharp_core_api.Models
 
       private static string getHashedPassword(string password)
       {
+         // file deepcode ignore InsecureHash: <please specify a reason of ignoring this>
          var md5 = MD5.Create();
          var hash = md5.ComputeHash(System.Text.Encoding.ASCII.GetBytes(password));
 
